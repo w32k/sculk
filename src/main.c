@@ -9,10 +9,10 @@ i32 main(){
         return -1;
     }
     while(SculkShouldClose() != SCSTATUS_SHOULD_CLOSE){
-        SculkGetEvents();
         SculkBeginDrawing();
         SculkClearColor(RGBA(0, 0, 0, 255));
-        SculkTestTriangle();
+        //SculkTestTriangle();
+        SculkTestRect();
         SculkEndDrawing();
     }
     SculkCloseWindow();

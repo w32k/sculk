@@ -66,21 +66,10 @@ typedef size_t isize;
 typedef enum _SCStatus {
     SCSTATUS_SUCCESS,
     SCSTATUS_FAILED,
-    SCSTATUS_WOULD_BLOCK,
     SCSTATUS_OUT_OF_MEMORY,
-    SCSTATUS_COULDNT_CREATE_SOCKET,
-    SCSTATUS_IP_CONV_FAILED,
-    SCSTATUS_CONNECTION_FAILED,
-    SCSTATUS_FAILED_TO_READ,
-    SCSTATUS_CANT_CREATE_BYTEBUF,
-    SCSTATUS_CANT_DECOMPRESS_PACKET,
     SCSTATUS_NOT_IMPLEMENTED,
-    SCSTATUS_CANT_SEND,
-    SCSTATUS_POSITION_OVERFLOW,
-    SCSTATUS_CONNECTION_ENDED,
     SCSTATUS_COULDNT_CHECK,
     SCSTATUS_NO_EVENT_AVALIABLE,
-    SCSTATUS_CANT_WRITE_INTO_BYTEBUF,
     SCSTATUS_BUFFER_OVERFLOW,
     SCSTATUS_CANT_START_WINDOWING_PLATFORM,
     SCSTATUS_CANT_CREATE_WINDOW,
@@ -115,6 +104,25 @@ typedef struct _SculkColor {
     u8 a;
 } SculkColor;
 
+typedef struct _SculkVec2f {
+    float x;
+    float y;
+} SculkVec2f;
+
+typedef struct _SculkVec3f {
+    float x;
+    float y;
+    float z;
+} SculkVec3f;
+
+
+
+
+typedef struct _SculkCamera {
+    SculkVec3f position;
+    SculkVec3f target;
+} SculkCamera;
+
 
 #define RGBA(r, g, b, a) ((SculkColor){r, g, b, a})
 
@@ -131,6 +139,7 @@ SCStatus SculkClearColor(_IN_ SculkColor color);
 SCStatus SculkBeginDrawing();
 SCStatus SculkEndDrawing();
 SCStatus SculkTestTriangle();
+SCStatus SculkTestRect();
 // do not call this
 SCStatus SculkDestroyRenderer();
 
