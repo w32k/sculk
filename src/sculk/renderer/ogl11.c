@@ -33,6 +33,7 @@ SCStatus SculkBeginDrawing(){
 // STUB, TODO: implement
 SCStatus SculkEndDrawing(){
     SculkFlushBuffers();
+    SculkSwapBuffers();
     return SCSTATUS_SUCCESS;
 }
 
