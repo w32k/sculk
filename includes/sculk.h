@@ -140,6 +140,7 @@ SCStatus SculkBeginDrawing();
 SCStatus SculkEndDrawing();
 SCStatus SculkTestTriangle();
 SCStatus SculkTestRect();
+SCStatus SculkTestCube(_IN_ float rotation);
 // do not call this
 SCStatus SculkDestroyRenderer();
 

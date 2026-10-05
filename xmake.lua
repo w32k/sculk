@@ -1,7 +1,7 @@
 target("sculk")
     set_kind("static")
     add_includedirs("includes")
-    add_files("src/sculk/renderer/ogl11.c", "src/sculk/window/rgfw.c", "src/extern/glad.c")
+    add_files("src/sculk/renderer/ogl11.c", "src/sculk/window/rgfw.c", "src/extern/gladogl11.c")
 
 
 
